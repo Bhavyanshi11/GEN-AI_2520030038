@@ -1,0 +1,75 @@
+# Week 4 – Tokenizer Lab: Comparison of BPE, WordPiece and SentencePiece
+
+## Student Details
+- **Name:** Bhavyanshi Yerramsetti
+- **Student ID:** 2520030038
+- **Course:** Generative AI
+- **Week:** 4
+
+## 1. Aim
+To implement and compare three popular tokenization techniques used in Natural Language Processing (NLP): Byte Pair Encoding (BPE), WordPiece, and SentencePiece. The comparison is performed using English, Telugu, and Hindi text.
+
+## 2. Tools and Technologies
+- Python 3.10+
+- Visual Studio Code
+- Hugging Face Transformers
+- SentencePiece
+- Pretrained tokenizer models
+
+## 3. Tokenizers Used
+
+| Tokenization Method | Pretrained Model |
+|---|---|
+| BPE | GPT-2 (`gpt2`) |
+| WordPiece | Multilingual BERT (`bert-base-multilingual-cased`) |
+| SentencePiece | XLM-RoBERTa (`xlm-roberta-base`) |
+
+## 4. Languages Tested
+- English
+- Telugu
+- Hindi
+
+## 5. Project Files
+- `tokenizer_comparison.py` – Python implementation for loading tokenizers and comparing their outputs.
+- `requirements.txt` – Required Python libraries.
+- `output.txt` – Stores the program execution output.
+- `Week4_Report.txt` – Practical report containing the aim, implementation details, results, and conclusion.
+- `Screenshots/` – Folder for execution screenshots.
+
+## 6. Implementation
+The Python program loads three pretrained tokenizers using Hugging Face Transformers. It processes sample sentences in English, Telugu, and Hindi.
+
+For each tokenizer, the program displays:
+1. Generated tokens.
+2. Corresponding token IDs.
+3. Total number of tokens.
+
+The results help understand how different tokenization techniques divide text, especially across multiple languages.
+
+## 7. Installation and Execution
+
+### Step 1: Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Step 2: Run the program
+```bash
+python tokenizer_comparison.py
+```
+
+### Step 3: Save the output
+```bash
+python tokenizer_comparison.py > output.txt
+```
+
+**Note:** An internet connection may be required the first time the pretrained models are downloaded.
+
+## 8. Result
+The three tokenization methods were implemented and tested using English, Telugu, and Hindi sample sentences. Their token pieces, token IDs, and token counts were displayed for comparison.
+
+## 9. Conclusion
+This practical demonstrates how BPE, WordPiece, and SentencePiece-based tokenizers process multilingual text. It provides an understanding of tokenization, subword segmentation, and the importance of tokenizers in modern Generative AI and Large Language Models.
+
+---
+**End of Week 4 Practical**
