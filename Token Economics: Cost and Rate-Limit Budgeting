@@ -1,0 +1,178 @@
+# Week 5 – Token Economics: Cost and Rate-Limit Budgeting
+
+## 1. Project Overview
+
+This project focuses on understanding and implementing Token Economics in Generative AI applications. It estimates the cost of API usage based on input tokens, output tokens, daily requests, and monthly budgets.
+
+The project also evaluates API rate limits, including Requests Per Minute (RPM) and Tokens Per Minute (TPM), to ensure that an application operates within defined usage limits.
+
+## 2. Objectives
+
+- Understand token-based pricing in Generative AI APIs.
+- Calculate input and output token costs.
+- Estimate daily and monthly API expenses.
+- Monitor Requests Per Minute (RPM).
+- Monitor Tokens Per Minute (TPM).
+- Apply safety margins to cost and usage calculations.
+- Check whether the application stays within its daily and monthly budget.
+- Identify potential rate-limit violations.
+
+## 3. Technologies Used
+
+- Python
+- Python-dotenv
+- VS Code
+- Git and GitHub
+
+## 4. Project Structure
+
+```text
+Week5/
+│
+├── budget.py
+├── test_budget.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+## 5. Description of Files
+
+**budget.py**
+
+Contains the main Python implementation. It reads configuration values, calculates token usage and API costs, checks rate limits, and generates a budget report.
+
+**test_budget.py**
+
+Contains unit tests to verify cost calculations, rate-limit checks, and monthly budget validation.
+
+**requirements.txt**
+
+Contains the Python dependencies required to execute the project.
+
+**.env**
+
+Stores configurable pricing, token usage, request limits, and budget values. It should remain local and must not be uploaded to GitHub.
+
+## 6. Installation and Setup
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Bhavyanshi11/GEN-AI_2520030038.git
+```
+
+### Step 2: Navigate to Week5
+
+```bash
+cd GEN-AI_2520030038/Week5
+```
+
+### Step 3: Create a Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+### Step 4: Activate the Virtual Environment
+
+For Windows PowerShell:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### Step 5: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## 7. Configuration
+
+Create a `.env` file in the Week5 directory and configure the following values:
+
+```env
+INPUT_PRICE_PER_MILLION=0.30
+OUTPUT_PRICE_PER_MILLION=1.20
+REQUESTS_PER_DAY=2000
+AVG_INPUT_TOKENS=1200
+AVG_OUTPUT_TOKENS=300
+PEAK_REQUESTS_PER_MINUTE=30
+RPM_LIMIT=60
+TPM_LIMIT=100000
+MONTHLY_BUDGET_USD=55
+DAILY_BUDGET_USD=2
+SAFETY_MARGIN_PERCENT=20
+```
+
+These are illustrative pricing and usage values used for the practical exercise.
+
+## 8. Execution
+
+Run the main Python program:
+
+```bash
+python budget.py
+```
+
+The program calculates:
+
+- Total daily input tokens.
+- Total daily output tokens.
+- Combined daily token usage.
+- Estimated daily API cost.
+- Estimated monthly API cost.
+- Peak RPM and TPM with a safety margin.
+- Daily and monthly budget status.
+- Rate-limit status.
+
+## 9. Testing
+
+Execute the unit tests using:
+
+```bash
+python -m unittest -v
+```
+
+The tests verify:
+
+1. Correct API cost estimation.
+2. Successful rate-limit validation.
+3. Detection of RPM limit violations.
+4. Detection of monthly budget violations.
+
+## 10. Expected Results
+
+With the default configuration:
+
+| Metric | Expected Value |
+|---|---:|
+| Daily Input Tokens | 2,400,000 |
+| Daily Output Tokens | 600,000 |
+| Total Daily Tokens | 3,000,000 |
+| Daily API Cost | $1.44 |
+| Monthly API Cost | $43.20 |
+| Peak RPM with Safety Margin | 36 |
+| Peak TPM with Safety Margin | 54,000 |
+
+The monthly budget is set to $55 to accommodate the 20% safety margin on the estimated monthly cost.
+
+## 11. Learning Outcomes
+
+After completing this practical, the following concepts are understood:
+
+- Token-based pricing in Generative AI.
+- Cost estimation for API requests.
+- Daily and monthly budget management.
+- RPM and TPM rate-limit calculations.
+- Importance of safety margins.
+- Python environment configuration.
+- Unit testing using the unittest framework.
+- Managing and uploading project files using GitHub.
+
+## 12. Conclusion
+
+This practical demonstrates how Token Economics can be applied to manage the operational costs of Generative AI applications. By estimating token consumption, calculating API expenses, and monitoring rate limits, developers can build applications that are more cost-efficient, reliable, and scalable.
+
+The implementation provides a basic budgeting and rate-limit monitoring system that can be extended for real-world Generative AI applications.
