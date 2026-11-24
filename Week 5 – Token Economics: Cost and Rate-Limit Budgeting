@@ -1,0 +1,76 @@
+# Week 5 – Token Economics: Cost and Rate-Limit Budgeting
+
+## Student Details
+- **Name:** Bhavyanshi Yerramsetti
+- **Student ID:** 2520030038
+- **Course:** Generative AI
+- **Week:** 5
+
+## 1. Aim
+To develop a Python-based token economics and budgeting tool that estimates token usage, calculates API costs, checks rate limits, and evaluates whether a Generative AI application can operate within a predefined budget.
+
+## 2. Tools and Technologies
+- Python 3.10+
+- Visual Studio Code
+- python-dotenv
+- Python unittest framework
+- Environment variables (`.env`)
+
+## 3. Project Files
+- `budget.py` – Main Python program for token usage, API cost, rate-limit calculations, and budget evaluation.
+- `test_budget.py` – Unit tests to verify the correctness of calculations.
+- `.env` – Configuration file containing request estimates, token usage, pricing, rate limits, and budget limits.
+- `requirements.txt` – Required Python dependencies.
+- `.gitignore` – Excludes environment files and unnecessary generated files from Git.
+- `README.md` – Project documentation.
+
+## 4. Key Concepts Implemented
+
+### Token Usage Estimation
+- Daily input token estimation.
+- Daily output token estimation.
+- Total daily token calculation.
+- Monthly token usage estimation.
+
+### API Cost Calculation
+- Input token pricing.
+- Output token pricing.
+- Daily API cost estimation.
+- Monthly API cost estimation.
+
+### Rate-Limit Budgeting
+- Requests Per Minute (RPM).
+- Tokens Per Minute (TPM).
+- Peak request estimation.
+- Rate-limit safety margin.
+
+### Budget Validation
+- Daily budget checking.
+- Monthly budget checking.
+- Safety margin application.
+- PASS or REVIEW recommendation.
+
+## 5. Sample Configuration
+The project uses the following sample assumptions:
+
+| Parameter | Value |
+|---|---:|
+| Requests per day | 2,000 |
+| Input tokens per request | 1,200 |
+| Output tokens per request | 300 |
+| Peak requests per minute | 30 |
+| Input price per million tokens | $0.30 |
+| Output price per million tokens | $1.20 |
+| RPM limit | 60 |
+| TPM limit | 100,000 |
+| Daily budget | $2 |
+| Monthly budget | $50 |
+| Safety margin | 20% |
+
+*These are sample pricing and usage assumptions for the practical, not live API quotations.*
+
+## 6. Installation and Execution
+
+### Step 1: Install dependencies
+```bash
+pip install -r
