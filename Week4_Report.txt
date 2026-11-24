@@ -1,0 +1,37 @@
+# WEEK 4 – TOKENIZER LAB
+
+**Title:** Comparison of BPE, WordPiece and SentencePiece Tokenizers
+
+**Student Name:** Bhavyanshi Yerramsetti  
+**Student ID:** 2520030038
+
+## 1. Aim
+To implement and compare three subword tokenization approaches—BPE, WordPiece and SentencePiece—using English, Telugu and Hindi text.
+
+## 2. Software Requirements
+- Python 3.10
+- Visual Studio Code
+- Transformers
+- SentencePiece
+
+## 3. Tokenizers Used
+
+| Tokenization Method | Pretrained Model |
+|---|---|
+| BPE | GPT-2 |
+| WordPiece | Multilingual BERT |
+| SentencePiece | XLM-R |
+
+## 4. Implementation
+A Python program was developed using the Hugging Face Transformers library. Three pretrained tokenizers were loaded and tested with English, Telugu and Hindi sentences.
+
+The program displays:
+- Token pieces
+- Token IDs
+- Total token count
+
+## 5. Result
+Successfully implemented and compared BPE, WordPiece and SentencePiece tokenizers using three different languages.
+
+## 6. Conclusion
+This practical helped understand how different tokenization methods divide text into smaller units. It also demonstrated that token counts differ depending on the tokenizer vocabulary, language and training data.
