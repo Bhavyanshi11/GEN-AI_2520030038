@@ -1,0 +1,38 @@
+# Week 1 Lab: First LLM API Call
+
+This project makes a first API request to an OpenAI model using Python. It sends a short prompt and prints the model’s response in the terminal.
+
+The API key is loaded from a local `.env` file. Keeping it out of the Python source helps prevent accidental exposure when sharing or committing the project.
+
+## Learning goals
+
+By completing this lab, you can:
+
+- Explain what an API key does when an application connects to a language model.
+- Install and use the OpenAI Python SDK.
+- Load a private API key from a `.env` file.
+- Send a prompt through the OpenAI Responses API.
+- Recognize common setup, authentication, billing, and model access errors.
+
+## Project files
+
+- `main.py` loads the API key, sends the sample prompt, and prints the response.
+- `.env` stores the API key on your computer.
+- `.gitignore` excludes `.env` and generated files from Git.
+- `requirements.txt` lists the Python packages needed by the program.
+
+## Requirements
+
+- Python and the existing project virtual environment.
+- An OpenAI API key with access to an available model.
+- Internet access.
+- API billing or available credits, if required by your account.
+
+**Note:** ChatGPT access and OpenAI API access are separate. A ChatGPT subscription does not automatically provide API credits.
+
+## Set up the environment
+
+Open a terminal in the `LAB\week 1` folder. Activate the virtual environment stored in the parent `LAB` folder:
+
+```powershell
+..\.MyEnv\Scripts\Activate.ps1
