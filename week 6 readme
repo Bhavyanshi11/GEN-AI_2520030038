@@ -1,0 +1,49 @@
+# Week 6 Generative AI Programming Practical
+
+## Llama 3.2 Golden Set Baseline Evaluation
+
+This project runs a fixed set of questions against a local Llama 3.2 model using Ollama. It compares each model response with an expected answer, checks how many expected keywords appear in the response, and saves the results in a CSV file.
+
+The baseline is labeled **Release v0.1**. It records an initial result before changing the model, prompts, or evaluation method. The keyword score is a simple coverage measure; it does not prove that a response is correct or complete.
+
+## Learning objectives
+
+By completing this practical, you will learn to:
+
+- Call a locally running language model from Python.
+- Store questions, expected answers, keywords, and sources in a JSON file.
+- Run the same questions against a model to create a baseline.
+- Score responses based on keyword coverage.
+- Save the evaluation results to a CSV file.
+- Review model responses and understand the limits of simple automated scoring.
+
+## Project files
+
+| File | Purpose |
+| --- | --- |
+| `main.py` | Loads the question set, sends questions to Ollama, scores the responses, prints a summary, and creates the CSV report. |
+| `golden_set.json` | Contains 30 questions, expected answers, keywords, and source links. |
+| `requirements.txt` | Lists the Python package needed to send requests to Ollama. |
+| `.gitignore` | Excludes Python cache files from Git. |
+| `baseline_results.csv` | Created when the program runs; contains one result row per question. |
+
+## Requirements
+
+You will need:
+
+- Python installed and available through the lab virtual environment.
+- Ollama installed and running on your computer.
+- The `llama3.2` model downloaded through Ollama.
+- Internet access to install Ollama and download the model.
+- Enough disk space and memory to run the local model.
+
+The Week 6 guide uses Ollama version 0.40.13 as an example. A compatible later version may also work. Model startup and response time depend on your computer’s hardware.
+
+## Install and check Ollama
+
+Install Ollama using the official installer for your operating system. On Windows, complete the installer and then open a new PowerShell terminal.
+
+Check that the `ollama` command is available:
+
+```powershell
+ollama --version
