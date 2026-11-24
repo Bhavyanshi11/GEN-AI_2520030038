@@ -1,0 +1,42 @@
+# Week 2 Lab: Provider-Agnostic LLM Client
+
+## One interface for Gemini and Ollama
+
+This project uses one common Python client to send prompts to either a hosted Gemini model or a local Ollama model. You choose the provider when you run the program. Both providers implement the same `generate(prompt)` interface, so the rest of the program can use either one without changing how it submits a prompt.
+
+## Learning objectives
+
+By completing this lab, you will learn to:
+
+- Define a common interface for different LLM providers.
+- Connect to a hosted Gemini model using the Google GenAI SDK.
+- Connect to a local Llama 3.2 model through Ollama.
+- Load a Gemini API key from a local `.env` file.
+- Choose a provider when the program runs.
+- Test the shared client interface with a fake provider that makes no network request.
+
+## Project files
+
+| File | Purpose |
+| --- | --- |
+| `llm_client.py` | Defines the provider interface, Gemini provider, Ollama provider, and shared client. |
+| `main.py` | Prompts you to choose a provider and enter a question, then prints the response. |
+| `test_client.py` | Checks the shared client using a fake provider. |
+| `requirements.txt` | Lists the Python packages required by the project. |
+| `.env` | Stores the Gemini API key locally. |
+| `.gitignore` | Prevents `.env` and Python cache files from being committed to Git. |
+
+## Requirements
+
+- Python and the existing lab virtual environment.
+- Internet access and a Gemini API key to use the Gemini provider.
+- Ollama installed and running, with `llama3.2` downloaded, to use the local provider.
+
+The two providers have different setup requirements. The Gemini provider uses an API key and requires access to Google’s Gemini API. The Ollama provider calls a model on your own computer and does not use the Gemini API key.
+
+## Set up the Python environment
+
+Open PowerShell in the `LAB\week 2` folder. Activate the shared lab virtual environment:
+
+```powershell
+..\.MyEnv\Scripts\Activate.ps1
